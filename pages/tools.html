@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - Tools Hub</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-tools"></i> Tools Hub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tools.html">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tools Section -->
+    <section class="tools-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Tools</h2>
+            
+            <!-- Age Calculator -->
+            <div class="tool-section" id="age-calculator">
+                <div class="container">
+                    <h2 class="text-center mb-4">Age Calculator</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="birthDate" class="form-label">Date of Birth</label>
+                                        <input type="date" class="form-control" id="birthDate">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="currentDate" class="form-label">Current Date</label>
+                                        <input type="date" class="form-control" id="currentDate">
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn btn-primary" onclick="calculateAge()">Calculate Age</button>
+                                    </div>
+                                    <div id="ageResult" class="mt-4 text-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator -->
+            <div class="tool-section" id="calculator">
+                <div class="container">
+                    <h2 class="text-center mb-4">Calculator</h2>
+                    <div class="calculator-container">
+                        <div class="display mb-3">
+                            <input type="text" class="form-control text-end" id="calc-display" readonly>
+                        </div>
+                        <div class="buttons">
+                            <div class="row g-2">
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="clearDisplay()">C</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('(')">(</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay(')')">)</button></div>
+                                <div class="col-3"><button class="btn btn-primary w-100" onclick="appendToDisplay('/')">/</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('7')">7</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('8')">8</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('9')">9</button></div>
+                                <div class="col-3"><button class="btn btn-primary w-100" onclick="appendToDisplay('*')">×</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('4')">4</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('5')">5</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('6')">6</button></div>
+                                <div class="col-3"><button class="btn btn-primary w-100" onclick="appendToDisplay('-')">-</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('1')">1</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('2')">2</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('3')">3</button></div>
+                                <div class="col-3"><button class="btn btn-primary w-100" onclick="appendToDisplay('+')">+</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('0')">0</button></div>
+                                <div class="col-3"><button class="btn btn-light w-100" onclick="appendToDisplay('.')">.</button></div>
+                                <div class="col-6"><button class="btn btn-success w-100" onclick="calculate()">=</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timer Tool -->
+            <section id="timer" class="tool-section">
+                <div class="container">
+                    <h2 class="text-center mb-4">Timer</h2>
+                    <div class="timer-container">
+                        <div class="display text-center mb-4">
+                            <h1 id="timer-display">00:00:00</h1>
+                        </div>
+                        <div class="controls text-center">
+                            <div class="input-group mb-3">
+                                <input type="number" class="form-control" id="hours" placeholder="Hours" min="0">
+                                <input type="number" class="form-control" id="minutes" placeholder="Minutes" min="0" max="59">
+                                <input type="number" class="form-control" id="seconds" placeholder="Seconds" min="0" max="59">
+                            </div>
+                            <button class="btn btn-primary me-2" onclick="startTimer()">Start</button>
+                            <button class="btn btn-danger me-2" onclick="pauseTimer()">Pause</button>
+                            <button class="btn btn-secondary" onclick="resetTimer()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Color Picker Tool -->
+            <section id="colorpicker" class="tool-section">
+                <div class="container">
+                    <h2 class="text-center mb-4">Color Picker</h2>
+                    <div class="color-picker-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Pick a Color</label>
+                                    <input type="color" class="form-control form-control-color w-100" id="colorPicker" value="#000000">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">RGB Values</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="rgb-r" placeholder="R" min="0" max="255">
+                                        <input type="number" class="form-control" id="rgb-g" placeholder="G" min="0" max="255">
+                                        <input type="number" class="form-control" id="rgb-b" placeholder="B" min="0" max="255">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">HEX Value</label>
+                                    <input type="text" class="form-control" id="hex-value" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="color-preview p-4 rounded" style="height: 200px;">
+                                    <p class="text-center mt-4">Color Preview</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Word Counter Tool -->
+            <section id="word-counter" class="tool-section py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">Word Counter</h2>
+                    <div class="tool-container">
+                        <div class="mb-3">
+                            <textarea id="word-counter-input" class="form-control" rows="6" placeholder="Enter your text here..."></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body text-center">
+                                        <h5>Words</h5>
+                                        <h3 id="word-count">0</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body text-center">
+                                        <h5>Characters</h5>
+                                        <h3 id="char-count">0</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body text-center">
+                                        <h5>Paragraphs</h5>
+                                        <h3 id="paragraph-count">0</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forex Calculator Tool -->
+            <section id="forex-calculator" class="tool-section py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-4">Forex Calculator</h2>
+                    <div class="tool-container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label class="form-label">Amount</label>
+                                    <input type="number" id="forex-amount" class="form-control" placeholder="Enter amount">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label class="form-label">From Currency</label>
+                                    <select id="from-currency" class="form-select">
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                        <option value="INR">INR</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label class="form-label">To Currency</label>
+                                    <select id="to-currency" class="form-select">
+                                        <option value="INR">INR</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="GBP">GBP</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button onclick="convertCurrency()" class="btn btn-primary">Convert</button>
+                        </div>
+                        <div class="result mt-4 text-center">
+                            <h3 id="forex-result">0.00</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Image Enhancer Tool -->
+            <section id="image-enhancer" class="tool-section">
+                <div class="container">
+                    <h2 class="text-center mb-4">Image Enhancer</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-4">
+                                        <label for="imageInput" class="form-label">Upload Image</label>
+                                        <input type="file" class="form-control" id="imageInput" accept="image/*">
+                                    </div>
+                                    <div class="image-preview mb-4">
+                                        <img id="previewImage" src="" alt="Preview" class="img-fluid d-none">
+                                    </div>
+                                    <div class="adjustment-controls mb-4">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label for="brightness" class="form-label">Brightness</label>
+                                                <input type="range" class="form-range" id="brightness" min="0" max="200" value="100">
+                                                <div class="text-center">
+                                                    <button class="btn btn-sm btn-outline-primary" onclick="adjustBrightness(10)">+</button>
+                                                    <button class="btn btn-sm btn-outline-primary" onclick="adjustBrightness(-10)">-</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="contrast" class="form-label">Contrast</label>
+                                                <input type="range" class="form-range" id="contrast" min="0" max="200" value="100">
+                                                <div class="text-center">
+                                                    <button class="btn btn-sm btn-outline-primary" onclick="adjustContrast(10)">+</button>
+                                                    <button class="btn btn-sm btn-outline-primary" onclick="adjustContrast(-10)">-</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="saturation" class="form-label">Saturation</label>
+                                                <input type="range" class="form-range" id="saturation" min="0" max="200" value="100">
+                                                <div class="text-center">
+                                                    <button class="btn btn-sm btn-outline-primary" onclick="adjustSaturation(10)">+</button>
+                                                    <button class="btn btn-sm btn-outline-primary" onclick="adjustSaturation(-10)">-</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn btn-primary" onclick="downloadImage()">Download Enhanced Image</button>
+                                        <button class="btn btn-secondary" onclick="resetImage()">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loan Calculator Tool -->
+            <section id="loan-calculator" class="tool-section py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-4">Loan Calculator</h2>
+                    <div class="tool-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Loan Amount</label>
+                                    <input type="number" id="loan-amount" class="form-control" placeholder="Enter loan amount">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Interest Rate (%)</label>
+                                    <input type="number" id="interest-rate" class="form-control" placeholder="Enter interest rate">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Loan Term (Years)</label>
+                                    <input type="number" id="loan-term" class="form-control" placeholder="Enter loan term">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Monthly Payment</h5>
+                                        <h3 id="monthly-payment">₹0.00</h3>
+                                        <h5>Total Interest</h5>
+                                        <h3 id="total-interest">₹0.00</h3>
+                                        <h5>Total Payment</h5>
+                                        <h3 id="total-payment">₹0.00</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button onclick="calculateLoan()" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EMI Calculator Tool -->
+            <section id="emi-calculator" class="tool-section py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">EMI Calculator</h2>
+                    <div class="tool-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Principal Amount</label>
+                                    <input type="number" id="principal-amount" class="form-control" placeholder="Enter principal amount">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Annual Interest Rate (%)</label>
+                                    <input type="number" id="annual-rate" class="form-control" placeholder="Enter annual interest rate">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Loan Term (Months)</label>
+                                    <input type="number" id="loan-months" class="form-control" placeholder="Enter loan term in months">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>Monthly EMI</h5>
+                                        <h3 id="monthly-emi">₹0.00</h3>
+                                        <h5>Total Interest</h5>
+                                        <h3 id="emi-total-interest">₹0.00</h3>
+                                        <h5>Total Payment</h5>
+                                        <h3 id="emi-total-payment">₹0.00</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button onclick="calculateEMI()" class="btn btn-primary">Calculate EMI</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8th Pay Commission Calculator Tool -->
+            <section id="pay-commission" class="tool-section py-5 bg-light">
+                <div class="container">
+                    <h2 class="text-center mb-4">8th Pay Commission Calculator</h2>
+                    <div class="tool-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Basic Pay</label>
+                                    <input type="number" id="basic-pay" class="form-control" placeholder="Enter basic pay">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Grade Pay</label>
+                                    <input type="number" id="grade-pay" class="form-control" placeholder="Enter grade pay">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">DA (%)</label>
+                                    <input type="number" id="da-percentage" class="form-control" placeholder="Enter DA percentage">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5>New Basic Pay</h5>
+                                        <h3 id="new-basic">₹0.00</h3>
+                                        <h5>New DA</h5>
+                                        <h3 id="new-da">₹0.00</h3>
+                                        <h5>Total Salary</h5>
+                                        <h3 id="total-salary">₹0.00</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button onclick="calculatePayCommission()" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Tools Hub provides a collection of useful tools for everyday use.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html" class="text-light">Home</a></li>
+                        <li><a href="tools.html" class="text-light">Tools</a></li>
+                        <li><a href="about.html" class="text-light">About</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Tools Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/tools.js"></script>
+</body>
+</html> 
