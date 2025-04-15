@@ -3,13 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools Hub - Your One-Stop Tool Collection</title>
+    <meta name="description" content="Free online tools collection - calculators, timers, converters and more. Your one-stop destination for all utility tools needs.">
+    <meta name="keywords" content="online tools, calculator, timer, age calculator, currency converter, loan calculator, word counter, image enhancer">
+    <meta name="author" content="Tools Hub">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Tools Hub - Your One-Stop Tool Collection">
+    <meta property="og:description" content="Free online tools collection - calculators, timers, converters and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.toolshub.example.com">
+    <meta property="og:image" content="https://www.toolshub.example.com/images/og-image.jpg">
+    <link rel="canonical" href="https://www.toolshub.example.com">
+    
+    <title>Tools Hub - Free Online Calculators, Timers & Utility Tools</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Tools Hub",
+      "url": "https://www.toolshub.example.com",
+      "description": "Collection of free online tools including calculators, timers, converters and more.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-YOUR_ADSENSE_ID",
+        enable_page_level_ads: true
+      });
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -18,7 +57,7 @@
             <a class="navbar-brand" href="index.html">
                 <i class="fas fa-tools"></i> Tools Hub
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -53,17 +92,35 @@
         </div>
     </header>
 
+    <!-- Top Ad Banner -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- AdSense Ad Unit -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
     <!-- Featured Tools Section -->
     <section class="featured-tools py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Featured Tools</h2>
+            <h1 class="text-center mb-4">Featured Tools</h1>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-birthday-cake fa-3x text-danger mb-3"></i>
-                            <h3 class="card-title h5">Age Calculator</h3>
-                            <p class="card-text">Calculate your exact age in years, months, and days.</p>
+                            <h2 class="card-title h5">Age Calculator</h2>
+                            <p class="card-text">Calculate your exact age in years, months, and days with our precise age calculator tool.</p>
                             <a href="pages/tools.html#age-calculator" class="btn btn-danger">Try It</a>
                         </div>
                     </div>
@@ -72,8 +129,8 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-calculator fa-3x text-primary mb-3"></i>
-                            <h3 class="card-title h5">Calculator</h3>
-                            <p class="card-text">Basic calculator for everyday calculations.</p>
+                            <h2 class="card-title h5">Calculator</h2>
+                            <p class="card-text">Basic calculator for everyday calculations with advanced functions.</p>
                             <a href="pages/tools.html#calculator" class="btn btn-primary">Try It</a>
                         </div>
                     </div>
@@ -82,18 +139,37 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-hourglass-half fa-3x text-success mb-3"></i>
-                            <h3 class="card-title h5">Timer</h3>
-                            <p class="card-text">Countdown timer with hours, minutes, and seconds.</p>
+                            <h2 class="card-title h5">Timer</h2>
+                            <p class="card-text">Countdown timer with hours, minutes, and seconds for productivity.</p>
                             <a href="pages/tools.html#timer" class="btn btn-success">Try It</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Middle Ad Banner -->
+            <div class="row my-4">
+                <div class="col-12 text-center">
+                    <!-- AdSense Ad Unit -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                         data-ad-slot="YOUR_AD_SLOT_ID"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-6t+ed+2i-1n-4w"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-palette fa-3x text-warning mb-3"></i>
-                            <h3 class="card-title h5">Color Picker</h3>
-                            <p class="card-text">Pick and convert colors between different formats.</p>
+                            <h2 class="card-title h5">Color Picker</h2>
+                            <p class="card-text">Pick and convert colors between HEX, RGB, HSL formats easily.</p>
                             <a href="pages/tools.html#color-picker" class="btn btn-warning">Try It</a>
                         </div>
                     </div>
@@ -102,8 +178,8 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-exchange-alt fa-3x text-info mb-3"></i>
-                            <h3 class="card-title h5">Forex Calculator</h3>
-                            <p class="card-text">Convert between different currencies with real-time rates.</p>
+                            <h2 class="card-title h5">Forex Calculator</h2>
+                            <p class="card-text">Convert between different currencies with real-time exchange rates.</p>
                             <a href="pages/tools.html#forex-calculator" class="btn btn-info">Try It</a>
                         </div>
                     </div>
@@ -112,18 +188,37 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-image fa-3x text-secondary mb-3"></i>
-                            <h3 class="card-title h5">Image Enhancer</h3>
-                            <p class="card-text">Enhance and optimize your images online.</p>
+                            <h2 class="card-title h5">Image Enhancer</h2>
+                            <p class="card-text">Enhance and optimize your images online for free.</p>
                             <a href="pages/tools.html#image-enhancer" class="btn btn-secondary">Try It</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- In-Content Ad -->
+            <div class="row my-4">
+                <div class="col-12 text-center">
+                    <!-- AdSense Ad Unit -->
+                    <ins class="adsbygoogle"
+                         style="display:block; text-align:center;"
+                         data-ad-layout="in-article"
+                         data-ad-format="fluid"
+                         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                         data-ad-slot="YOUR_AD_SLOT_ID"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            
+            <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-money-bill-wave fa-3x text-success mb-3"></i>
-                            <h3 class="card-title h5">Loan Calculator</h3>
-                            <p class="card-text">Calculate loan payments and interest rates.</p>
+                            <h2 class="card-title h5">Loan Calculator</h2>
+                            <p class="card-text">Calculate loan payments, interest rates and amortization schedules.</p>
                             <a href="pages/tools.html#loan-calculator" class="btn btn-success">Try It</a>
                         </div>
                     </div>
@@ -132,8 +227,8 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-calculator fa-3x text-primary mb-3"></i>
-                            <h3 class="card-title h5">EMI Calculator</h3>
-                            <p class="card-text">Calculate Equated Monthly Installments for loans.</p>
+                            <h2 class="card-title h5">EMI Calculator</h2>
+                            <p class="card-text">Calculate Equated Monthly Installments for home, car and personal loans.</p>
                             <a href="pages/tools.html#emi-calculator" class="btn btn-primary">Try It</a>
                         </div>
                     </div>
@@ -142,19 +237,9 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body text-center">
                             <i class="fas fa-file-invoice-dollar fa-3x text-warning mb-3"></i>
-                            <h3 class="card-title h5">8th Pay Commission Calculator</h3>
-                            <p class="card-text">Calculate salary as per 8th Pay Commission.</p>
+                            <h2 class="card-title h5">8th Pay Commission Calculator</h2>
+                            <p class="card-text">Calculate salary as per 8th Pay Commission for government employees.</p>
                             <a href="pages/tools.html#pay-commission" class="btn btn-warning">Try It</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center">
-                            <i class="fas fa-font fa-3x text-info mb-3"></i>
-                            <h3 class="card-title h5">Word Counter</h3>
-                            <p class="card-text">Count words, characters, and paragraphs in your text.</p>
-                            <a href="pages/tools.html#word-counter" class="btn btn-info">Try It</a>
                         </div>
                     </div>
                 </div>
@@ -162,29 +247,64 @@
         </div>
     </section>
 
+    <!-- Bottom Ad Banner -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- AdSense Ad Unit -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-dark text-light py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>Tools Hub provides a collection of useful tools for everyday use.</p>
+                    <h3>About Us</h3>
+                    <p>Tools Hub provides a collection of free online tools for everyday use including calculators, converters, timers and more.</p>
+                    <div class="mt-3">
+                        <a href="sitemap.xml" class="text-light me-2">Sitemap</a>
+                        <a href="privacy-policy.html" class="text-light me-2">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="text-light">Terms of Service</a>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h5>Quick Links</h5>
+                    <h3>Quick Links</h3>
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-light">Home</a></li>
-                        <li><a href="pages/tools.html" class="text-light">Tools</a></li>
+                        <li><a href="pages/tools.html" class="text-light">All Tools</a></li>
+                        <li><a href="pages/popular-tools.html" class="text-light">Popular Tools</a></li>
+                        <li><a href="pages/new-tools.html" class="text-light">New Tools</a></li>
                         <li><a href="pages/about.html" class="text-light">About</a></li>
                         <li><a href="pages/contact.html" class="text-light">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Connect With Us</h5>
-                    <div class="social-links">
-                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                    <h3>Connect With Us</h3>
+                    <div class="social-links mb-3">
+                        <a href="#" class="text-light me-3" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4 class="h6">Subscribe to our newsletter</h4>
+                        <form class="mt-2">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your email" aria-label="Your email">
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -199,5 +319,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    
+    <!-- Lazy Load Ads -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Lazy load ads when they come into viewport
+        const ads = document.querySelectorAll('.adsbygoogle');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        ads.forEach(ad => {
+            observer.observe(ad);
+        });
+    });
+    </script>
 </body>
-</html> 
+</html>
